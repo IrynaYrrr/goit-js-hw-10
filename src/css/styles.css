@@ -12,9 +12,50 @@ body {
   line-height: 1.5;
 }
 
+li {
+  list-style-type: none;
+}
+
 #search-box {
   font: inherit;
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+}
+
+.country-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.data-list {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+
+.country-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-flag {
+  width: 50px;
+  height: 30px;
+}
+
+.flag-country {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.country-name {
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.country-data {
+  font-size: 18px;
 }
