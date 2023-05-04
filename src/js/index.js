@@ -21,7 +21,11 @@ inputSearch.addEventListener("input", debounce((e) => {
     .then((countries) => renderCountryList(countries))
     .catch((error) => {
       console.log(error);
-      Notify.failure('Oops, there is no country with that name');
+      Notify.failure('Oops, there is no country with that name',  {
+        width: '300px',
+        position: 'center-top',
+        distance: '10px',
+      });
     });
 }, DEBOUNCE_DELAY));
 
@@ -35,7 +39,11 @@ function getLanguages(country) {
 
 function renderCountryList(countries) {
   if (countries.length > 10) {
-    Notify.info('Too many matches found. Please enter a more specific name.');
+    Notify.info('Too many matches found. Please enter a more specific name.',  {
+      width: '300px',
+      position: 'center-top',
+      distance: '10px',
+    });
     return
   } else if (countries.length === 1) {
     const currentCountry = countries[0];
