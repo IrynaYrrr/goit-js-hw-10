@@ -5,10 +5,7 @@ export function fetchCountries(name) {
     }
     return response.json();
   })
-  .then(data => {
-    return data;
-  })
-  .catch(error => {
-    console.log('error fetching countries');
-  });
+    .then(data => {
+      return data;
+    })
 }
